@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Desktop from "./pages/Desktop";
+import Desktop from "./pages/Desktop1";
 
 function App() {
   const action = useNavigationType();
@@ -24,6 +25,10 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/desktop-2":
         title = "";
         metaDescription = "";
         break;
@@ -46,6 +51,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Desktop />} />
+      <Route path="/desktop-2" element={<Desktop />} />
     </Routes>
   );
 }
